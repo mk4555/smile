@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Navbar } from "./components/Navbar";
+import { Main } from "./pages/Main";
+import { Men } from "./pages/Men";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "pink",
+    margin: "0 auto",
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <div className={classes.root}>
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/men" component={Men} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
