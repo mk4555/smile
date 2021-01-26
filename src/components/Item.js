@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   root: {
     borderRadius: "0",
     boxShadow: "none",
+    backgroundColor: "#F8EDEB",
   },
   media: {
     height: 300,

@@ -75,7 +75,7 @@ const mockData = [
 export const Market = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="row" className={classes.root}>
+    <Grid container spacing={1} direction="row" className={classes.root}>
       {mockData.map((item) => (
         <Grid item key={item.id} xs={12} sm={6} lg={4}>
           <Item product={item} />
