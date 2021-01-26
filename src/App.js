@@ -6,7 +6,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  root: {
+  global: {
+    backgroundColor: "pink",
+    height: "100vh",
+  },
+  content: {
     backgroundColor: "pink",
     margin: "0 auto",
   },
@@ -15,10 +19,10 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.global}>
       <Router>
         <Navbar />
-        <div className={classes.root}>
+        <div className={classes.content}>
           <Switch>
             <Route exact path="/" component={Main} />
             <Route exact path="/men" component={Men} />

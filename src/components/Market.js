@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    width: "80%",
+    width: "70%",
     margin: "0 auto",
   },
 });
@@ -29,13 +29,57 @@ const mockData = [
     img: "link",
     price: 19.99,
   },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
+  {
+    id: 3,
+    name: "SHIRT",
+    img: "link",
+    price: 19.99,
+  },
 ];
 export const Market = () => {
   const classes = useStyles();
   return (
-    <Grid container spacing={4} direction="row" className={classes.root}>
+    <Grid container direction="row" className={classes.root}>
       {mockData.map((item) => (
-        <Item product={item} key={item.id} />
+        <Grid item key={item.id} xs={12} sm={6} lg={4}>
+          <Item product={item} />
+        </Grid>
       ))}
     </Grid>
   );
