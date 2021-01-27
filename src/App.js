@@ -8,11 +8,13 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles({
   global: {
     backgroundColor: "pink",
-    height: "100vh",
+    height: "100%",
+    minHeight: "100vh",
   },
   content: {
     backgroundColor: "pink",
     margin: "0 auto",
+    width: "70%",
   },
 });
 

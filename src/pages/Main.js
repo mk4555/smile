@@ -1,5 +1,9 @@
 import React from "react";
-
+import { Section } from "../components/Section";
 export const Main = () => {
-  return <div>Nothin yet</div>;
+  return (
+    <div>
+      <Section />
+    </div>
+  );
 };
