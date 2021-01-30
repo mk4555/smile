@@ -2,6 +2,9 @@ import React from "react";
 import { Navbar } from "./components/Navbar";
 import { Main } from "./pages/Main";
 import { Men } from "./pages/Men";
+import { Women } from "./pages/Women";
+import { Kids } from "./pages/Kids";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 
@@ -10,8 +13,10 @@ const useStyles = makeStyles({
     backgroundColor: "pink",
     height: "100%",
     minHeight: "100vh",
+    overflow: "auto",
   },
   content: {
+    paddingTop: 25,
     backgroundColor: "pink",
     margin: "0 auto",
     width: "70%",
@@ -28,6 +33,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Main} />
             <Route exact path="/men" component={Men} />
+            <Route exact path="/women" component={Women} />
+            <Route exact path="/kids" component={Kids} />
           </Switch>
         </div>
       </Router>
