@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     backgroundImage: (props) => `url(${props.image})`,
     backgroundSize: "cover",
+    borderRadius: "0 0 100% 100%",
   },
 });
 

@@ -13,7 +13,6 @@ const useStyles = makeStyles({
     backgroundColor: "pink",
     height: "100%",
     minHeight: "100vh",
-    overflow: "auto",
   },
   content: {
     paddingTop: 25,
