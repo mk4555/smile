@@ -6,11 +6,11 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     width: 300,
     height: 300,
-    backgroundColor: "black",
+    backgroundColor: "#e8e8e4",
     margin: "0 auto",
   },
 });
 export const Circle = () => {
   const classes = useStyles();
-  return <div className={classes.root} />;
+  return <div className={classes.root} onMouseEnter={() => alert("sale")} />;
 };
