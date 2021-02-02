@@ -7,12 +7,15 @@ import Grid from "@material-ui/core/Grid";
 export const Main = () => {
   return (
     <Grid container spacing={5}>
-      <Grid item xs={6}>
-        <Circle />
+      <Grid container style={{ height: 500 }}>
+        <Grid item xs={6}>
+          <Circle />
+        </Grid>
+        <Grid item xs={6}>
+          <Circle />
+        </Grid>
       </Grid>
-      <Grid item xs={6}>
-        <Circle />
-      </Grid>
+
       <Grid item xs={12}>
         <Section image={rack} />
       </Grid>
