@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 export const Navbar = () => {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = useState(false);
   const [logo, setLogo] = useState(false);
   const classes = useStyles();
   const history = useHistory();

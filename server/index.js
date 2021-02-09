@@ -8,9 +8,10 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 // routes
-app.use("/items", itemRoutes);
 
 app.use(cors());
+app.use("/items", itemRoutes);
+
 app.use(express.json());
 dotenv.config();
 const CONNECTION_URI = process.env.ATLAS_URI;
