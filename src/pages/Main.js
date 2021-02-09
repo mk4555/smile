@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 export const Main = () => {
   return (
     <Grid container spacing={5}>
-      <Grid container style={{ height: 500 }}>
+      <Grid container style={{ height: 300 }}>
         <Grid item xs={6}>
           <Circle />
         </Grid>
