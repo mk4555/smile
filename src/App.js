@@ -36,10 +36,18 @@ function App() {
         <Navbar />
         <div className={classes.content}>
           <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/men" component={Men} />
-            <Route exact path="/women" component={Women} />
-            <Route exact path="/kids" component={Kids} />
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route exact path="/men">
+              <Men />
+            </Route>
+            <Route exact path="/women">
+              <Women />
+            </Route>
+            <Route exact path="/kids">
+              <Kids />
+            </Route>
           </Switch>
         </div>
       </Router>
