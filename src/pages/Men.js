@@ -4,10 +4,9 @@ import { useSelector } from "react-redux";
 export const Men = () => {
   const items = useSelector((state) => state.items);
 
-  console.log(items);
   return (
     <div>
-      <Market />
+      <Market items={items} />
     </div>
   );
 };

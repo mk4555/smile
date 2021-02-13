@@ -2,8 +2,8 @@
   "name": "smile",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http:///localhost:5000",
-  "main": "index.js",
+  "main": "./server/index.js",
+  "proxy": "http://0.0.0.0:8000",
   "type": "module",
   "dependencies": {
     "@material-ui/core": "^4.11.2",
@@ -33,7 +33,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon ./server/index.js"
+    "server": "nodemon ./server/index.js --ignore frontend"
   },
   "eslintConfig": {
     "extends": [

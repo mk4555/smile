@@ -10,10 +10,11 @@ export const getItems = async (req, res) => {
   }
 };
 
-export const addItem = async (req, res) => {
+export const createItem = async (req, res) => {
   const item = req.body;
   const newItem = new Item(item);
   try {
+    console.log(item);
     await newItem.save();
     res.status(201).json(newItem);
   } catch (error) {
