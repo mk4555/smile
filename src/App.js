@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 import { Main } from "./pages/Main";
 import { Men } from "./pages/Men";
 import { Women } from "./pages/Women";
@@ -50,6 +51,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
     </div>
   );
