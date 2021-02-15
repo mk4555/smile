@@ -5,7 +5,7 @@ const useStyles = makeStyles({
   container: {
     height: 200,
     backgroundColor: "#f8edeb",
-    boxSizing: "border-box",
+    marginTop: 100,
   },
 });
 

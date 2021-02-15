@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 const useStyles = makeStyles({
   root: {
     margin: "0 auto",
+    minHeight: "100vh",
   },
 });
 

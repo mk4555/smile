@@ -13,7 +13,6 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles({
   global: {
     backgroundColor: "pink",
-    height: "100%",
     minHeight: "100vh",
   },
   content: {
@@ -51,8 +50,8 @@ function App() {
             </Route>
           </Switch>
         </div>
-        <Footer />
       </Router>
+      <Footer />
     </div>
   );
 }
