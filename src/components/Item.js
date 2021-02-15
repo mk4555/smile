@@ -26,7 +26,7 @@ export const Item = (props) => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={props.product.img}
           title="Contemplative Reptile"
         />
         <CardContent>
