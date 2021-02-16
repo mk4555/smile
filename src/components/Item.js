@@ -6,29 +6,38 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
     borderRadius: "0",
     boxShadow: "none",
     backgroundColor: "#F8EDEB",
+    height: "100%",
   },
   media: {
-    height: 400,
+    minHeight: 400,
+    height: "100%",
   },
 });
 
 export const Item = (props) => {
   const classes = useStyles();
+  const history = useHistory();
 
+  const handleClick = (name, id) => {
+    history.push({
+      pathname: `/product/${name}/${id}`,
+      data: props.product,
+    });
+  };
   return (
-    <Card className={classes.root}>
+    <Card
+      className={classes.root}
+      onClick={() => handleClick(props.product.name, props.product._id)}
+    >
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.product.img}
-          title="Contemplative Reptile"
-        />
+        <CardMedia className={classes.media} image={props.product.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.product.name}
@@ -44,7 +53,7 @@ export const Item = (props) => {
 
 Item.defaultProps = {
   product: {
-    id: "0",
+    _id: "0",
     img: "none",
     name: "N/A",
     price: "N/A",
@@ -52,6 +61,7 @@ Item.defaultProps = {
 };
 Item.propTypes = {
   product: PropTypes.shape({
+    _id: PropTypes.string,
     img: PropTypes.string,
     name: PropTypes.string,
     price: PropTypes.number,

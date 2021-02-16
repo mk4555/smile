@@ -6,6 +6,7 @@ import { Main } from "./pages/Main";
 import { Men } from "./pages/Men";
 import { Women } from "./pages/Women";
 import { Kids } from "./pages/Kids";
+import { Product } from "./pages/Product";
 import { getItems } from "./actions/items";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
@@ -36,18 +37,11 @@ function App() {
         <Navbar />
         <div className={classes.content}>
           <Switch>
-            <Route exact path="/">
-              <Main />
-            </Route>
-            <Route exact path="/men">
-              <Men />
-            </Route>
-            <Route exact path="/women">
-              <Women />
-            </Route>
-            <Route exact path="/kids">
-              <Kids />
-            </Route>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/men" component={Men} />
+            <Route exact path="/women" component={Women} />
+            <Route exact path="/kids" component={Kids} />
+            <Route path="/product/:name/:id" component={Product} />
           </Switch>
         </div>
       </Router>
