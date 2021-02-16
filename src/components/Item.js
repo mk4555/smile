@@ -28,7 +28,7 @@ export const Item = (props) => {
   const handleClick = (name, id) => {
     history.push({
       pathname: `/product/${name}/${id}`,
-      data: props.product,
+      state: props.product,
     });
   };
   return (
