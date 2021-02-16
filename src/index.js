@@ -7,14 +7,19 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import { Auth0ProviderWithHistory } from "./auth/auth0-provider-with-history";
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Router>
+      <Auth0ProviderWithHistory>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </Auth0ProviderWithHistory>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
