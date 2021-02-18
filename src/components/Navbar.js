@@ -3,6 +3,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { Link, useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
+
 const useStyles = makeStyles({
   logo: {
     textAlign: "center",
@@ -11,6 +12,9 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     width: "10%",
     margin: "0 auto",
+  },
+  login: {
+    float: "right",
   },
 });
 
@@ -29,14 +33,17 @@ export const Navbar = () => {
 
   return (
     <div>
-      <div
-        className={classes.logo}
-        onClick={handleLogo}
-        onMouseEnter={() => setLogo(true)}
-        onMouseLeave={() => setLogo(false)}
-      >
-        {logo ? ":)" : "SMILE"}
+      <div>
+        <div
+          className={classes.logo}
+          onClick={handleLogo}
+          onMouseEnter={() => setLogo(true)}
+          onMouseLeave={() => setLogo(false)}
+        >
+          {logo ? ":)" : "SMILE"}
+        </div>
       </div>
+
       <Tabs centered value={tab} onChange={handleTab}>
         <Tab disableRipple label="Men" value={1} to="/men" component={Link} />
         <Tab
