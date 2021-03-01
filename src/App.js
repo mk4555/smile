@@ -10,7 +10,6 @@ import { Product } from "./pages/Product";
 import { getItems } from "./actions/items";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
-
 const useStyles = makeStyles({
   global: {
     backgroundColor: "pink",
@@ -21,6 +20,11 @@ const useStyles = makeStyles({
     backgroundColor: "pink",
     margin: "0 auto",
     width: "70%",
+  },
+  signIn: {
+    position: "absolute",
+    right: 0,
+    top: 0,
   },
 });
 

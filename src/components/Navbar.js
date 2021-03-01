@@ -33,17 +33,14 @@ export const Navbar = () => {
 
   return (
     <div>
-      <div>
-        <div
-          className={classes.logo}
-          onClick={handleLogo}
-          onMouseEnter={() => setLogo(true)}
-          onMouseLeave={() => setLogo(false)}
-        >
-          {logo ? ":)" : "SMILE"}
-        </div>
+      <div
+        className={classes.logo}
+        onClick={handleLogo}
+        onMouseEnter={() => setLogo(true)}
+        onMouseLeave={() => setLogo(false)}
+      >
+        {logo ? ":)" : "SMILE"}
       </div>
-
       <Tabs centered value={tab} onChange={handleTab}>
         <Tab disableRipple label="Men" value={1} to="/men" component={Link} />
         <Tab
